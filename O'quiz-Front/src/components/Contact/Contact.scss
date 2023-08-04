@@ -1,0 +1,81 @@
+.containner {
+  width: 600px;
+  padding: 20px;
+  background-color: #f2921d;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  margin-left: auto; /* Ajout de la propriété pour centrer horizontalement */
+  margin-right: auto; /* Ajout de la propriété pour centrer horizontalement */
+}
+
+.Titre {
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+  padding: 20px;
+  color: black;
+}
+
+.containner input[type='text'],
+.containner input[type='email'],
+.containner textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+  font-size: 14px;
+  background-color: #f2cd5c;
+}
+
+.containner .name__fields {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.containner .name__fields input {
+  flex: 1;
+}
+
+.containner label {
+  font-weight: bold;
+}
+
+.containner textarea {
+  height: 100px;
+}
+
+.containner input[type='submit'] {
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  margin-left: 460px;
+  cursor: pointer;
+}
+
+.containner input[type='submit']:hover {
+  background-color: #45a049;
+}
+
+/* Media query pour les écrans de 767px et moins */
+@media (max-width: 767px) {
+  .containner {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+    box-sizing: border-box;
+  }
+
+  .containner input[type='submit'] {
+    width: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}

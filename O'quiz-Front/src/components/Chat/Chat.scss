@@ -1,0 +1,137 @@
+.round__button {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  width: 75px;
+  height: 75px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50%;
+  background-color: #6b0b4b;
+  display: flex;
+  justify-content: center;
+  align-items: center; /* Centrer le contenu horizontalement et verticalement */
+}
+
+.chat__popup {
+  position: fixed;
+  top: 61%;
+  left: 78%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  height: 46%;
+  background-color: #f1f1f1;
+  border: 2px solid #6b0b4b;
+  border-radius: 5px;
+  padding: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  display: none;
+}
+
+.chat__container {
+  display: flex;
+}
+
+.chat__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.close__button {
+  background-color: #6b0b4b;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.chat__messages {
+  flex-grow: 1;
+  max-height: 250px;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+.message {
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.chat__input {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.emoji__button {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.fake__emoji__picker {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 10%;
+  right: 6%;
+
+  button {
+    margin: 5px;
+    font-size: 20px;
+  }
+}
+
+.emoji__button.active {
+  color: #ffc300;
+}
+
+input[type='text'] {
+  flex-grow: 1;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-right: 5px;
+}
+
+button {
+  background-color: #6b0b4b;
+  border: none;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.user__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 10px; /* Ajouter une marge à gauche pour laisser de l'espace pour la colonne des utilisateurs en ligne */
+}
+
+.user__list h4 {
+  margin-top: 0;
+}
+
+.user__list ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.user__list ul li {
+  background-color: #fff;
+  padding: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+}

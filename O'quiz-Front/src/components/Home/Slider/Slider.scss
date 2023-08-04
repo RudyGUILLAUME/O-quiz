@@ -1,0 +1,55 @@
+.carousel {
+  position: relative;
+}
+
+.carousel-root {
+  width: 100%;
+}
+
+.carousel .thumbs {
+  display: flex;
+  justify-content: center;
+  margin: 0;
+  padding: 10px;
+}
+.carousel .thumb {
+  margin: 0 5px;
+  cursor: pointer;
+}
+.carousel .thumb.selected {
+  display: none;
+}
+
+.carousel .overlay {
+  width: 80%;
+  position: absolute;
+  top: 70%;
+  transform: translateY(-50%);
+  left: 10%;
+  padding: 0.6rem 1.5rem;
+  text-align: left;
+  background: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  text-align: center;
+}
+.carousel .overlay__title {
+  margin: 0.5rem 0 0.8rem 0;
+}
+
+@media screen and (max-width: 360px) {
+  .carousel .slide img {
+    width: 100vw !important;
+    height: 40vh;
+    object-fit: cover;
+  }
+}
+
+@media screen and (min-width: 1023px) {
+  .carousel-root {
+    width: 50%;
+    height: 20%;
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+}

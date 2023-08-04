@@ -1,0 +1,56 @@
+.overlay {
+  z-index: 99;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.modalContainer {
+  padding: 10px;
+  width: 270px;
+
+  background-color: #6b0848;
+  color: white;
+  box-shadow: 2px 2px 4px -0px rgba(0, 0, 0, 0.3);
+  border-radius: 0 0 0 5px;
+  border-bottom: solid 1px #f2921d;
+  border-left: solid 1px #f2921d;
+}
+
+.account-creation-button {
+  background-color: #f2921d;
+  border-radius: 5px;
+  border: 0.01rem solid #ec610a;
+  padding: 5px 15px;
+  color: white;
+}
+
+.closeBtn {
+  background-color: white;
+  border-radius: 5px;
+  border: 0.01rem solid #ec610a;
+  padding: 5px 15px;
+  color: black;
+}
+
+@media screen and (max-width: 767px) {
+  .overlay {
+    z-index: 99;
+    position: absolute;
+
+    position: absolute;
+    right: 0%;
+    top: 40px;
+  }
+  .modalContainer {
+    padding: 10px;
+    width: 100vw;
+    z-index: 99;
+    background-color: #6b0848;
+    color: white;
+    box-shadow: none;
+    border-radius: 0;
+    border-bottom: solid 1px #f2921d;
+    border-left: none;
+  }
+}

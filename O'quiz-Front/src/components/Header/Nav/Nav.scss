@@ -1,0 +1,151 @@
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 75px;
+  background-color: #6b0848;
+  padding: 1rem;
+  color: white;
+}
+
+.navbar__links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding: 15px 25px;
+  border-radius: 5px;
+  gap: 2em;
+  background-color: #f2cd5c;
+}
+
+.navbar__item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  font-size: 1.2em;
+  border-radius: 1px;
+  background-color: #f2921d;
+  border-radius: 5px;
+  border: 0.01rem solid #ec610a;
+  padding: 5px 15px;
+
+  &:hover {
+    background-color: #ec610a;
+    border-color: #f2921d;
+  }
+}
+
+.navbar__link {
+  padding: 0 2rem;
+  color: inherit;
+}
+
+.navbar__burger {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  color: #f2cd5c;
+  display: none;
+  border-style: none;
+}
+
+@media screen and (max-width: 767px) {
+  // content display when clicking on the burger menu icon
+  .navbar__links {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    right: -100vw;
+    bottom: 0;
+    height: 100vh;
+    width: 0;
+    padding: 2rem;
+    background-color: #6b0848;
+    visibility: hidden;
+    transition: all 0.8s ease-out;
+    z-index: 1000;
+  }
+
+  .show-nav .navbar__links {
+    right: 0;
+    width: 100vw;
+    visibility: visible;
+  }
+
+  .navbar__link {
+    display: block;
+    padding: 0.8rem;
+    font-size: 4vh;
+  }
+
+  .navbar__button {
+    display: block;
+    padding: 1rem;
+    font-size: 4vh;
+  }
+
+  .navbar__burger {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    z-index: 1001;
+  }
+
+  .navbar__burger:hover {
+    cursor: pointer;
+  }
+
+  // burger menu icon design
+  .burger-bar,
+  .burger-bar::before,
+  .burger-bar::after {
+    display: block;
+    width: 40px;
+    height: 3px;
+    position: relative;
+    border-radius: 3px;
+    background: white;
+    transition: all 0.5s ease-in-out;
+  }
+
+  .burger-bar::before,
+  .burger-bar::after {
+    content: '';
+    position: absolute;
+    left: 0;
+  }
+
+  .burger-bar::before {
+    transform: translateY(-12px);
+  }
+
+  .burger-bar::after {
+    transform: translateY(12px);
+  }
+
+  // animation of the burger menu that becomes a cross
+  .show-nav .burger-bar {
+    background: transparent;
+    width: 0;
+  }
+
+  .show-nav .burger-bar::before {
+    transform: rotate(45deg);
+  }
+
+  .show-nav .burger-bar::after {
+    transform: rotate(-45deg);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .navbar__links {
+    margin: 0 6.8rem;
+  }
+}

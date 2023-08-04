@@ -1,0 +1,109 @@
+.container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  gap: 1em;
+
+  .category_title {
+    font-size: 2em;
+    color: #f2921d;
+    margin-top: 0.8em;
+  }
+  .rank {
+    font-size: 1.6em;
+    color: #f2921d;
+    margin: 0.8em 0 0.8em 0;
+  }
+
+  .category_container {
+    margin: 0 auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .gamemode {
+      font-size: 1.6em;
+      color: #f2921d;
+      margin: 0.8em 0 0.8em 0;
+    }
+
+    .quiz_container {
+      display: flex;
+      justify-content: center;
+
+      .quiz_list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 1rem;
+
+        // TODO changer les background par les photos des quiz
+        .quiz_name {
+          padding: 40px;
+          color: white;
+          background-color: #6b0848;
+          border-radius: 15px;
+        }
+      }
+
+      @media screen and (min-width: 768px) {
+        .quiz_list {
+          gap: 3rem;
+          .quiz_name {
+            padding: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  .ranking__top {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .container__bottom {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    margin: 1.5em;
+
+    .rank__bottom {
+      background-color: #862e4c;
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      border-radius: 15px;
+      margin: 0.5rem 0 0.5rem 0;
+      padding: 0.5rem 0 0.5rem 0;
+
+      .logo__rank__bottom {
+        width: 5%;
+        height: 50%;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .container {
+    h2 {
+      font-size: 2.8em;
+      margin: 0.8em 0 0 0;
+    }
+
+    .container__bottom {
+      margin: 3rem 7rem;
+
+      .ranking__bottom {
+        background-color: #6b0848;
+        align-items: center;
+        padding: 0 140px 0 140px;
+        border-radius: 15px;
+      }
+    }
+  }
+}
